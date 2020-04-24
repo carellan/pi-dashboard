@@ -3,10 +3,7 @@ Raspberry Pi Control Panel
 
 Instalar Apache y PHP
 ```
-apt -y install apache2
-```
-```
-apt -y install php
+apt -y install apache2 php php-common
 ```
 
 The Raspberry Pi Control Panel is designed to give you a fast overview of your Raspberry Pi.
