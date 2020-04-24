@@ -1,6 +1,14 @@
 Raspberry Pi Control Panel
 =========
 
+Instalar Apache y PHP
+```
+apt -y install apache2
+```
+```
+apt -y install php
+```
+
 The Raspberry Pi Control Panel is designed to give you a fast overview of your Raspberry Pi.
 
 It was originally programmed to fit my needs, so if you need something else, you are free to add it yourself. I use it on RaspBMC,
