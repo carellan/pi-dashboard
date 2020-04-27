@@ -25,7 +25,7 @@ cd /var/www/html/
 
 git clone https://github.com/carellan/torpiweb.git
 ```
-A continuación debemos añadir el usuario www-data en el fichero /etc/sudoers
+A continuación debemos añadir el usuario **www-data** en el fichero /etc/sudoers
 ```
 vi /etc/sudoers
 ```
