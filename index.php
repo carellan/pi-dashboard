@@ -1,3 +1,24 @@
+<?php 
+$password = "torpi2020";
+if ($_POST['password'] != $password) { 
+?>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+	<div class="img"><img src="images/torpi-logo.png" width="200" height="200" alt=""/></div>
+	<form name="form" method="post" action="">
+  	<input type="password" name="password"><br>
+	<input type="submit" value="Login"></form>
+</body>
+</html>
+
+<?php 
+}else{
+?>
 <?php
 ob_start();
 
@@ -84,20 +105,6 @@ include 'localization/' . LANGUAGE . '.lang.php';
 			</script>
 		<?php } ?>
 
-		<?php if (isset($voltage) && is_numeric($voltage)) { ?>
-			<div id="voltgauge"></div>
-			<script>
-				var v = new JustGage({
-					id: "voltgauge",
-					value: <?php echo $voltage; ?>,
-					min: 0.8,
-					max: 1.4,
-					title: "<?php echo TXT_VOLTAGE; ?>",
-					label: "V"
-				});
-			</script>
-		<?php } ?>
-
 		<?php if (isset($cpuusage) && is_numeric($cpuusage)) { ?>
 			<div id="cpugauge"></div>
 			<script>
@@ -112,37 +119,44 @@ include 'localization/' . LANGUAGE . '.lang.php';
 			</script>
 		<?php } ?>
 
-		<?php if (isset($clock) && is_numeric($clock)) { ?>
-			<div id="clockgauge"></div>
-			<script>
-				var c = new JustGage({
-					id: "clockgauge",
-					value: <?php echo $clock; ?>,
-					min: 0,
-					max: 1000,
-					title: "<?php echo TXT_CLOCK; ?>",
-					label: "MHz"
-				});
-			</script>
-		<?php } ?>
+                <?php if (isset($clock) && is_numeric($clock)) { ?>
+                        <div id="clockgauge"></div>
+                        <script>
+                                var c = new JustGage({
+                                        id: "clockgauge",
+                                        value: <?php echo $clock; ?>,
+                                        min: 0,
+                                        max: 1000,
+                                        title: "<?php echo TXT_CLOCK; ?>",
+                                        label: "MHz"
+                                });
+                        </script>
+                <?php } ?>
 
-		
 
 		<div id="controls">
+			<br />
 			<a class="button_orange" href="modules/shutdown.php?action=0" onclick="return checkAction('<?php echo TXT_RESTART_1; ?>');"><?php echo TXT_RESTART_2; ?></a><br />
 			<a class="button_red" href="modules/shutdown.php?action=1" onclick="return checkAction('<?php echo TXT_SHUTDOWN_1; ?>');"><?php echo TXT_SHUTDOWN_2; ?></a>
+			
+		</div>
+
+
+		<div id="controls">
+			<h5 align="center">Estado de TOR</h5>	
 			<div class="onoffswitch">
 				<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onClick="location.href='modules/switch-tor.php?status=<?php echo $return_tor ?>'" value=True <?php echo ($return_tor==0 ? 'checked' : '');?>>
-				<label class="onoffswitch-label" for="myonoffswitch">
-					<span class="onoffswitch-inner"></span>
-					<span class="onoffswitch-switch"></span>
-				</label>
+					<label class="onoffswitch-label" for="myonoffswitch">
+						<span class="onoffswitch-inner"></span>
+						<span class="onoffswitch-switch"></span>
+					</label>
+				</div>
 			</div>
 		</div>
 	</div>
 </body>
 
 </html>
-
-
-<!--  href='modules/switch-tor.php?status=<?php echo $return_tor ?>' -->
+<?php 
+} 
+?>
