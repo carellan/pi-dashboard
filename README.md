@@ -25,24 +25,14 @@ cd /var/www/html/
 
 git clone https://github.com/carellan/torpiweb.git
 ```
-A continuación debemos añadir el usuario www-data en el fichero sudoers
+A continuación debemos añadir el usuario www-data en el fichero /etc/sudoers
 ```
 vi /etc/sudoers
 
-www-data ALL=NOPASSWD:/
 ```
-
+```
+www-data ALL=NOPASSWD: ALL
+```
 
 Seguidamente, ya podemos acceder a nuestro servidor web indicando al final de este /torpiweb
 
-Se ha dotado de un password para proteger el acceso.
-
-
-For the reboot and shutdown buttons to work, you need to adjust your /etc/sudoers file by using
-```sh
-sudo visudo
-```
-and adding this line
-```sh
-www-data ALL=NOPASSWD:/sbin/shutdown
-```
