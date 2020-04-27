@@ -1,27 +1,20 @@
-Raspberry Pi Control Panel
+TorPi - Panel de Control
 =========
+TorPi Panel de Control es una aplicación web con una serie de información  los cuales de forma totalmente gráfica, permite ver el estado de la Rasberry Pi y ejecutar funciones como 
+
+Para poder ejectuarlo correctamente se necesitan los siguientes programas.
 
 Instalar Apache y PHP
 ```
 apt -y install apache2 php php-common
 ```
-
-The Raspberry Pi Control Panel is designed to give you a fast overview of your Raspberry Pi.
-
-It was originally programmed to fit my needs, so if you need something else, you are free to add it yourself. I use it on RaspBMC,
-i haven't testet it, but it should work on all other Raspbian/Debian based distributions.
-
-Localizations can be created by adding files to
+Una vez instado hay que realizar el git clone en la siguiente ruta
 ```
-./localization/langugage.lang.php
+cd /var/www/html/
+
+git clone
 ```
 
-and editing *index.php* by changing
-
-```
-define(LANGUAGE, "english");
-```
-to your languagefile.
 
 **Preview:**
 
