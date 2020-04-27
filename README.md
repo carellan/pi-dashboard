@@ -12,13 +12,17 @@ Una vez instado hay que realizar el git clone en la siguiente ruta
 ```
 cd /var/www/html/
 
-git clone
+git clone https://github.com/carellan/torpiweb.git
 ```
+Seguidamente, ya podemos acceder a nuestro servidor web indicando al final de este /torpiweb
 
+Se ha dotado de un password para proteger el acceso.
 
 **Preview:**
 
-![alt tag](http://i.imgur.com/kxLWoH7.png)
+![alt tag](https://i.ibb.co/RBjFnLV/login-torpiweb.png)
+
+![alt tag](https://i.ibb.co/ZHR19fY/torpi-control-panel.png)
 
 Tech
 -----------
