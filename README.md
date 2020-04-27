@@ -1,6 +1,6 @@
 TorPi - Panel de Control
 =========
-TorPi Panel de Control es una aplicación web con una serie de información  los cuales de forma totalmente gráfica, permite ver el estado de la Rasberry Pi y ejecutar funciones como 
+TorPi Panel de Control es una aplicación web que proporciona información del estado de la Raspberry Pi y la posibilidad de reiniciar, apagar el dispositivo y cambiar el estado del servicio TOR. 
 
 Para poder ejectuarlo correctamente se necesitan los siguientes programas.
 
@@ -24,13 +24,6 @@ Se ha dotado de un password para proteger el acceso.
 
 ![alt tag](https://i.ibb.co/ZHR19fY/torpi-control-panel.png)
 
-Tech
------------
-
-Raspberry Pi Control Panel includes some libraries. Libraries used are:
-
-* [JustGage] - JavaScript library for the gauges.
-* [Raphaël] - JavaScript library for vector graphics. Needed by JustGage.
 
 Installation
 --------------
