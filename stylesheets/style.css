@@ -1,0 +1,33 @@
+titulo {
+    	text-decoration: underline;
+	text-align: center;
+
+}
+
+body {
+	background-image: url("fdo.jpg");
+}
+
+img{
+	text-align: center;
+	display:block;
+	margin:auto;
+	padding: 20px;
+}
+
+form{
+	color: #999;
+	padding: 20px;
+	margin: 0 auto;
+    width: 200px;
+}
+
+input{
+	border: 0px;
+	width: 200px;
+}
+.center-content{
+    text-align: center;
+}
+
+
